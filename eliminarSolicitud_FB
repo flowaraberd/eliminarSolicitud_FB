@@ -1,0 +1,24 @@
+let solicitudDelete = -1;
+let scrollYs = 0;
+let solicitud = document.querySelector('.sxpk6l6v').children[3].children.length;
+setInterval(()=>{
+solicitud = document.querySelector('.sxpk6l6v').children[3].children.length;
+},1000);
+let count = 0;
+let inter = setInterval(()=>{
+count++;
+let noDelete = document.querySelector('.sxpk6l6v').children[3].children[count].children[0].children[0].children[0].children[1].children[0].children[1].children[0].children[0].children[1].children[1];
+if(noDelete){
+scrollYs+=80;
+solicitudDelete++;
+if(solicitudDelete < solicitud){
+document.querySelector('.q5bimw55 ').scrollTo(0,scrollYs);
+document.querySelector('.sxpk6l6v').children[3].children[solicitudDelete].children[0].children[0].children[0].children[1].children[0].children[1].children[0].children[0].children[1].children[1].click();
+}else{
+clearInteval(inter);
+}
+}
+},1000);
+
+//CON ESTO PODREMOS ELIMINAR TODAS LAS SOLICITUDES QUE TENGAMOS, CON ESTO EVITAMOS TENER QUE BORRAR
+//UNA POR UNA, ES MEJOR AUTOMATIZADO EL TIEMPO ES ORO. DEJA TU ESTRELLA.
